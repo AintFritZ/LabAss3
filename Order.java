@@ -54,6 +54,7 @@ public class Order {
 
     private void calculateTotalAmount() {
         Double amount = quantity * unitPrice;
-        totalAmount = amount - (mode.determineDiscountRate() * amount);
+        double discountRate = mode.determineDiscountRate();
+        totalAmount = amount - (discountRate * amount);
     }
 }
