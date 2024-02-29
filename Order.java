@@ -44,6 +44,7 @@ public class Order {
     public void setMode(PaymentMode mode) {
         this.mode = mode;
     }
+
     public Order(String item, Double unitPrice, Integer quantity, PaymentMode mode) {
         this.item = item;
         this.unitPrice = unitPrice;
