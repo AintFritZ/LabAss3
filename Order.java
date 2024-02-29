@@ -34,7 +34,7 @@ public class Order {
     }
 
     public void setTotalAmount() {
-        this.calculateTotalAmount();
+        this.calculateTotal();
     }
 
     public PaymentMode getMode() {
@@ -49,10 +49,10 @@ public class Order {
         this.unitPrice = unitPrice;
         this.quantity = quantity;
         this.mode = mode;
-        this.calculateTotalAmount();
+        this.calculateTotal();
     }
 
-    private void calculateTotalAmount() {
+    private void calculateTotal() {
         Double amount = quantity * unitPrice;
         double discountRate = mode.determineDiscountRate();
         totalAmount = amount - (discountRate * amount);
